@@ -19,6 +19,7 @@ int main (int argc, char **argv)
   unsigned int filler5 = 0x71171075;
 
   unsigned int red = read(STDIN_FILENO,buf,80);
-  buf[red] = '\x00';
-  printf(buf);
+  printf("%d\n", red);
+	buf[red] = '\x00';
+	printf(buf);
 }
