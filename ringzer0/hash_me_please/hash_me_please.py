@@ -34,6 +34,6 @@ def send_ans(ans):
 username = raw_input("username : ")
 password = getpass.getpass("password : ")
 build_session(username, password)
-text =  get_text()
+text = get_text()
 ans = hash_sha512(text)
 send_ans(ans)      
