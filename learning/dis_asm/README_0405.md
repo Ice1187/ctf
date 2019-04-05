@@ -92,8 +92,23 @@
 * 16bits (32位元下)
 
 * FLAGS用來記錄狀態，比如進位、溢位、結果為零...
-    * CF(進位) = Carry Flag 
-    * 
+    * CF = Carry Flag
+        * 如果指令的運作中，使得資料產生了Carry，那麼CF就會變成 1 (set)，反之就是 0 (reset)
+        * 例如 1000000000000000 + 1000000000000000 = ==1==0000000000000000，第17位為1就紀錄`CF = 1` 
+    * ZF = Zero Flag
+        * 如果計算結果為0，`ZF = 1`，反之`ZF = 0`
+    * SF = Sign Flag
+        * 如果計算結果有負號，那麼`SF = 1`，反之`SF = 0`
+    * TF = Trap Flag
+        * 如果`TF = 1`，那麼電腦的程式會逐行執行 (用於除錯等用途)
+    * DF = Direction Flag
+        * 決定字串的讀取是由「高位讀到低位」(small endian)還是「低位讀到高位」(big endian)
+        * X86的設計，預設是small endian
+        * `DF = 0`時，為small endian
+        * 在small endian下，位址`00`資料為`34`，位址`01`資料為`12`，則這個字串讀起來就是 `1234`
+    * OF = Overflow Flag
+        * 如果計算結果產生溢位(overflow)，`OF = 1`，反之`OF = 0`
 
 
 ###### tags: `CTF` `dis_asm`
+
