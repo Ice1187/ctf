@@ -1,6 +1,13 @@
 #include<iostream>
 using namespace std;
 
+int func(int a, int x = 0){
+  if(a > x)
+    return 1;
+  else
+    return 0;
+}
+
 int main(){
   int a;
   a = 0;
@@ -17,6 +24,11 @@ int main(){
   b = 9;
   b = a * b;
   a = b / a;
+
+  a = 5;
+  b = -3;
+  a = func(a);
+  b = func(b, 3);
 
   return 0;
 }
