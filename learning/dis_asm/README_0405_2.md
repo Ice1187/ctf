@@ -110,5 +110,4 @@
         * 如果計算結果產生溢位(overflow)，`OF = 1`，反之`OF = 0`
 
 
-###### tags: `CTF` `dis_asm`
-
+###### tags: `CTF` `Learning` `dis_asm`

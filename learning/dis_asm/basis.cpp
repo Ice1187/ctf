@@ -1,7 +1,13 @@
 #include<iostream>
 using namespace std;
 
+int glob = 0;
+
 int func(int a, int x = 0){
+  int f, g, h;
+  f = 0;
+  g = 1;
+  h = 2;
   if(a > x)
     return 1;
   else
