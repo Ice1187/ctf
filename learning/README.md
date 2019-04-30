@@ -1,93 +1,92 @@
-0409 Learning program_security 筆記8
+0427 Shellcoding 筆記11
 ===
 
 * 教材
-    * [Pwn 1 (2018 Bamboofox社課)](https://drive.google.com/file/d/16eP_DqOXdh-TljABnIHWsCByL5a0u0zF/view) 
-    * [Secure Programming
-Smashing the Stack (Bamboofox)](https://bamboofox.cs.nctu.edu.tw/uploads/material/attachment/8/Secure_Programming_Smashing_the_Stack.pdf)
+    * [Linux Shellcoding (0x00SEC)](https://0x00sec.org/t/linux-shellcoding-part-1-0/289)
+    * [Introduction to 8086 Assembly Language](https://www.shsu.edu/~csc_tjm/spring2005/cs272/intro_to_asm.html)
+
+---
+
+## Memory Segments 
+
+---`high`---
+
+* Stack segment (For function calls (dynamic)). 
+* Heap segment (For dynamicly allocating memory).
+* Data segment (assigned Variables).
+* Bss segment (no assigned Variables).
+& Text segment (Set of instructions (The actual code)).
+
+---`low`---
+
+## Reserving space for variables
+
+### Define
+```a
+[name] [(might be) lables] [value]
+
+section .data 
+numRows    DB 25 
+numColumns DB ? 
+videoBase  DW 0800h
+```
+* DB and DW are common directives (define byte) and (define word). The symbols associated with variables are called `labels`.
+* Strings may be declared using the DB directive:
+`aTOm DB "ABCDEFGHIJKLM"`
+
+### Program Data and Storage
+* Pseudo-ops to define data or reserve storage
+    * DB - byte(s)
+    * DW - word(s)
+    * DD - doubleword(s)
+    * DQ - quadword(s)
+    * DT - tenbyte(s)
+
+### Defining Data
+* Numeric data values
+	* 100 - decimal
+	* 100b - binary
+	* 100h - hexadecimal
+	* '100' - ASCII
+	* "100" - ASCII
+* Use the appropriate `DEFINE` directive (byte, word, etc.)
+* A list of values may be used - the following creates 4 consecutive words: `DW 40Ch,10b,-13,0`
+
+* A `?` represents an uninitialized storage location: 
+`DB 255,?,-128,'X'`
+
+## syscall into kernel mode
+
+* `syscall` is default way of entering kernel mode on x86-64. This instruction is not available in 32 bit modes of operation on Intel processors.
+* `sysenter` is an instruction most frequently used to invoke system calls in 32 bit modes of operation. It is similar to syscall, a bit more difficult to use though, but that is kernel's concern.
+* `int 0x80` is a legacy way to invoke a system call and should be avoided.
+
+> So, ==stop using `int 0x80`==. Use `syscall` in x86_64 and `sysenter` in x86
 
 * 參考
-    * [checksec及其包含的保护机制](http://yunnigu.dropsec.xyz/2016/10/08/checksec%E5%8F%8A%E5%85%B6%E5%8C%85%E5%90%AB%E7%9A%84%E4%BF%9D%E6%8A%A4%E6%9C%BA%E5%88%B6/)
-    * [printf函數leak與canary繞過原理及利用方式
-](https://read01.com/zh-tw/5M24yNm.html#.XKoAIOgkvb0)
+    * [What is better? int-0x80 or syscall](https://stackoverflow.com/questions/12806584/what-is-better-int-0x80-or-syscall)
+## A simple assembly program (cp from 教材)
 
----
+* This sample is based on x86, but it somehow works well on my x86-64 Kali. Maybe `nasm` & `ld` have the ability to cover this misusing.
 
-## 編譯程序
-* [ELF檔案格式與程式的編譯連結](https://www.itread01.com/content/1549571596.html)
-* [連結器linker (wiki)](https://zh.wikipedia.org/wiki/%E9%93%BE%E6%8E%A5%E5%99%A8)
+```a
+section .data
+  msg db '/bin/sh', 0 ; db stands for 【define byte】, msg will now be a string pointer.
+ 
+section .text
+  global _start   ; Needed for compiler, comparable to int main()
+ 
+_start:
+  mov eax, 11     ; eax = 11, think of it like this mov [destination], [source], 11 is execve
+  mov ebx, msg    ; Load the string pointer into ebx
+  mov ecx, 0      ; no arguments in exc
+  int 0x80        ; syscall
+ 
+  mov eax, 1      ; exit syscall
+  mov ebx, 0      ; no errors
+  syscall
+  ```
 
-* 編譯程序圖
-
-![編譯程序](https://img-blog.csdn.net/20160123200340137)
-
- 1. `code(.c .cpp .h)`跟`Header Files(.h)`，經過`預處理器(cpp)`預處理，生成`.i`檔案
- 2. `.i`檔案，經`編譯器(cc1、cc1plus)`編譯，生成`.s`檔案
- 3. `.s`檔案，經`彙編器(as)`彙編，生成`.o`檔案
- 4. `.o`檔案跟`Static Library(.a)`，經`連結器(ld)`連結，生成可執行檔案。
-> * gcc是對cpp、cc1(cc1plus)、as、ld這些後臺程式的包裝，它會根據不同的引數要求去呼叫後臺程式。
->   * 以hello程式為例，使用gcc -o hello hello.c時加上-v選項可觀察到詳細的步驟。也可使用gcc分別進行以上四步驟，
-        1. **preprocess** 預編譯: `gcc -E hello.cpp -o hello.i` (處理#include, #defined之類的，.i file)
-        2. **compilation** 編譯:　`gcc -S hello.i -o hello.s` (code 轉成 assembler source，.s file) 
-        3. **assembly** 彙編:　`gcc -c hello.s -o hello.o`(asm source 轉成 binary asm，obj file)
-        4. **link** 連結:　`gcc -o hello hello.o` (link 並轉成 executable)
-
-* GCC編譯過程分解
-
-![GCC編譯過程分解](https://img-blog.csdn.net/20160123205549808)
-
-
-> 1. 以下分析一下編譯完成之後的ELF檔案：
->
-> `readelf -S add.o檢視section header table`
-> 
-> ![](https://img-blog.csdn.net/20160125150047179)
-> 
-> ![](https://img-blog.csdn.net/20160125150959720)
-> 
-> 由section header table可推測add.c檔案程式碼中並沒有實際資料(.data的size大小為0)。add.o中共包含了11個節描述符，每個節描述符大小為40位元組(sizeof(Elf32_Shdr))，共440位元組，因此在這11個節之後還有440位元組的section header table。
->
-> `readelf -S main.o檢視section header table`
->
-> ![](https://img-blog.csdn.net/20160125152437005)
->
-> alloc表示該section在程序地址空間中要分配空間(.text .data .bss都會有這個標誌)
->
-> ![](https://img-blog.csdn.net/20160125200436445)
->
-> main.o中共有14個節描述符，每個節的大小為40位元組(sizeof(Elf32_Shdr))，因此這14個節之後還有560位元組的section header table。
-
-* 上述比較表示，link後，會做alloc
-
-* [The Preprocessor (The C Book)](https://publications.gbdirect.co.uk/c_book/chapter7/)
-
----
-
-## Static/Dynamic Linking  靜/動態連結
-
-* 教材
-    * [動態(Dynamic Linking)與靜態連結(Static Linking) (阿洲 blog)](http://monkeycoding.com/?p=876)
-
-* 參考
-    * [靜態函式庫 wiki](https://zh.wikipedia.org/wiki/%E9%9D%99%E6%80%81%E5%BA%93)
-    * [Why are #ifndef and #define used in C++ header files?
-](https://stackoverflow.com/questions/1653958/why-are-ifndef-and-define-used-in-c-header-files)
-    * [使用 gcc 自製 C/C++ 靜態、共享與動態載入函式庫教學](https://blog.gtwang.org/programming/howto-create-library-using-gcc/)
-
-## Program Security
-
-* 教材
-    * [Pwn 1 (2018 Bamboofox社課)](https://drive.google.com/file/d/16eP_DqOXdh-TljABnIHWsCByL5a0u0zF/view) 
-    * [Shared Library 中 PLT 和 GOT 的使用機制](http://brandon-hy-lin.blogspot.com/2015/12/shared-library-plt-got.html)
-
-<iframe src="https://drive.google.com/file/d/16eP_DqOXdh-TljABnIHWsCByL5a0u0zF/preview" width="640" height="480"></iframe>
-
-### Lazy binding & GOT和PLT
-
-* [Lazy binding](https://rafaelchen.wordpress.com/2017/09/25/pwn%E7%9A%84%E4%BF%AE%E7%85%89%E4%B9%8B%E8%B7%AF-lazy-binding/)
-
-* [Global Offset Table (GOT) and Procedure Linkage Table (PLT) (Liveoverflow)](https://www.youtube.com/watch?v=kUk5pw4w0h4)
-
----
-
-###### tags: `CTF` `Learning` `program_secrity`
+----
+  
+###### tags: `CTF` `Learning` `Shellcode`

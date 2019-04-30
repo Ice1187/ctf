@@ -1,2 +1,4 @@
-break vuln
+break *0x08048653
+
+
 

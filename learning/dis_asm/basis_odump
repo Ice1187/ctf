@@ -1,0 +1,474 @@
+
+basis:     file format elf64-x86-64
+
+Contents of section .interp:
+ 02a8 2f6c6962 36342f6c 642d6c69 6e75782d  /lib64/ld-linux-
+ 02b8 7838362d 36342e73 6f2e3200           x86-64.so.2.    
+Contents of section .note.ABI-tag:
+ 02c4 04000000 10000000 01000000 474e5500  ............GNU.
+ 02d4 00000000 03000000 02000000 00000000  ................
+Contents of section .note.gnu.build-id:
+ 02e4 04000000 14000000 03000000 474e5500  ............GNU.
+ 02f4 b1652f3f efa28a43 b46b4936 331b981c  .e/?...C.kI63...
+ 0304 77534fd6                             wSO.            
+Contents of section .gnu.hash:
+ 0308 02000000 09000000 01000000 06000000  ................
+ 0318 00008100 00000000 09000000 00000000  ................
+ 0328 d165ce6d                             .e.m            
+Contents of section .dynsym:
+ 0330 00000000 00000000 00000000 00000000  ................
+ 0340 00000000 00000000 a7000000 12000000  ................
+ 0350 00000000 00000000 00000000 00000000  ................
+ 0360 ae000000 12000000 00000000 00000000  ................
+ 0370 00000000 00000000 6d000000 12000000  ........m.......
+ 0380 00000000 00000000 00000000 00000000  ................
+ 0390 1f000000 20000000 00000000 00000000  .... ...........
+ 03a0 00000000 00000000 ca000000 12000000  ................
+ 03b0 00000000 00000000 00000000 00000000  ................
+ 03c0 10000000 20000000 00000000 00000000  .... ...........
+ 03d0 00000000 00000000 3b000000 20000000  ........;... ...
+ 03e0 00000000 00000000 00000000 00000000  ................
+ 03f0 55000000 12000000 00000000 00000000  U...............
+ 0400 00000000 00000000 bb000000 22000000  ............"...
+ 0410 00000000 00000000 00000000 00000000  ................
+Contents of section .dynstr:
+ 0420 006c6962 73746463 2b2b2e73 6f2e3600  .libstdc++.so.6.
+ 0430 5f5f676d 6f6e5f73 74617274 5f5f005f  __gmon_start__._
+ 0440 49544d5f 64657265 67697374 6572544d  ITM_deregisterTM
+ 0450 436c6f6e 65546162 6c65005f 49544d5f  CloneTable._ITM_
+ 0460 72656769 73746572 544d436c 6f6e6554  registerTMCloneT
+ 0470 61626c65 005f5a4e 53743869 6f735f62  able._ZNSt8ios_b
+ 0480 61736534 496e6974 44314576 005f5a4e  ase4InitD1Ev._ZN
+ 0490 53743869 6f735f62 61736534 496e6974  St8ios_base4Init
+ 04a0 43314576 006c6962 6d2e736f 2e36006c  C1Ev.libm.so.6.l
+ 04b0 69626763 635f732e 736f2e31 006c6962  ibgcc_s.so.1.lib
+ 04c0 632e736f 2e360070 72696e74 66005f5f  c.so.6.printf.__
+ 04d0 6378615f 61746578 6974005f 5f637861  cxa_atexit.__cxa
+ 04e0 5f66696e 616c697a 65005f5f 6c696263  _finalize.__libc
+ 04f0 5f737461 72745f6d 61696e00 474c4942  _start_main.GLIB
+ 0500 4358585f 332e3400 474c4942 435f322e  CXX_3.4.GLIBC_2.
+ 0510 322e3500                             2.5.            
+Contents of section .gnu.version:
+ 0514 00000200 02000300 00000200 00000000  ................
+ 0524 03000200                             ....            
+Contents of section .gnu.version_r:
+ 0528 01000100 01000000 10000000 20000000  ............ ...
+ 0538 74299208 00000300 dc000000 00000000  t)..............
+ 0548 01000100 9d000000 10000000 00000000  ................
+ 0558 751a6909 00000200 e8000000 00000000  u.i.............
+Contents of section .rela.dyn:
+ 0568 a83d0000 00000000 08000000 00000000  .=..............
+ 0578 50110000 00000000 b03d0000 00000000  P........=......
+ 0588 08000000 00000000 93120000 00000000  ................
+ 0598 b83d0000 00000000 08000000 00000000  .=..............
+ 05a8 10110000 00000000 38400000 00000000  ........8@......
+ 05b8 08000000 00000000 38400000 00000000  ........8@......
+ 05c8 d03f0000 00000000 06000000 09000000  .?..............
+ 05d8 00000000 00000000 d83f0000 00000000  .........?......
+ 05e8 06000000 04000000 00000000 00000000  ................
+ 05f8 e03f0000 00000000 06000000 05000000  .?..............
+ 0608 00000000 00000000 e83f0000 00000000  .........?......
+ 0618 06000000 06000000 00000000 00000000  ................
+ 0628 f03f0000 00000000 06000000 07000000  .?..............
+ 0638 00000000 00000000 f83f0000 00000000  .........?......
+ 0648 06000000 08000000 00000000 00000000  ................
+Contents of section .rela.plt:
+ 0658 18400000 00000000 07000000 01000000  .@..............
+ 0668 00000000 00000000 20400000 00000000  ........ @......
+ 0678 07000000 02000000 00000000 00000000  ................
+ 0688 28400000 00000000 07000000 03000000  (@..............
+ 0698 00000000 00000000                    ........        
+Contents of section .init:
+ 1000 4883ec08 488b05dd 2f000048 85c07402  H...H.../..H..t.
+ 1010 ffd04883 c408c3                      ..H....         
+Contents of section .plt:
+ 1020 ff35e22f 0000ff25 e42f0000 0f1f4000  .5./...%./....@.
+ 1030 ff25e22f 00006800 000000e9 e0ffffff  .%./..h.........
+ 1040 ff25da2f 00006801 000000e9 d0ffffff  .%./..h.........
+ 1050 ff25d22f 00006802 000000e9 c0ffffff  .%./..h.........
+Contents of section .plt.got:
+ 1060 ff256a2f 00006690                    .%j/..f.        
+Contents of section .text:
+ 1070 31ed4989 d15e4889 e24883e4 f050544c  1.I..^H..H...PTL
+ 1080 8d058a02 0000488d 0d230200 00488d3d  ......H..#...H.=
+ 1090 f6000000 ff15462f 0000f40f 1f440000  ......F/.....D..
+ 10a0 488d3d99 2f000048 8d05922f 00004839  H.=./..H.../..H9
+ 10b0 f8741548 8b051e2f 00004885 c07409ff  .t.H.../..H..t..
+ 10c0 e00f1f80 00000000 c30f1f80 00000000  ................
+ 10d0 488d3d69 2f000048 8d35622f 00004829  H.=i/..H.5b/..H)
+ 10e0 fe48c1fe 034889f0 48c1e83f 4801c648  .H...H..H..?H..H
+ 10f0 d1fe7414 488b05f5 2e000048 85c07408  ..t.H......H..t.
+ 1100 ffe0660f 1f440000 c30f1f80 00000000  ..f..D..........
+ 1110 803d292f 00000075 2f554883 3dae2e00  .=)/...u/UH.=...
+ 1120 00004889 e5740c48 8b3d0a2f 0000e82d  ..H..t.H.=./...-
+ 1130 ffffffe8 68ffffff c605012f 0000015d  ....h....../...]
+ 1140 c30f1f80 00000000 c30f1f80 00000000  ................
+ 1150 e97bffff ff554889 e5897dec 8975e8c7  .{...UH...}..u..
+ 1160 45fc0000 0000c745 f8010000 00c745f4  E......E......E.
+ 1170 02000000 8b45ec3b 45e87e07 b8010000  .....E.;E.~.....
+ 1180 00eb05b8 00000000 5dc35548 89e54883  ........].UH..H.
+ 1190 ec10c745 fc000000 008345fc 01c745f4  ...E......E...E.
+ 11a0 01000000 8b45fc01 45f48b45 f489c648  .....E..E..E...H
+ 11b0 8d3d4f0e 0000b800 000000e8 70feffff  .=O.........p...
+ 11c0 c745f800 00000083 7df8047f 0c8b45f8  .E......}.....E.
+ 11d0 0145fc83 45f801eb ee8b45fc 89c6488d  .E..E.....E...H.
+ 11e0 3d200e00 00b80000 0000e841 feffffc7  = .........A....
+ 11f0 45fc0300 0000c745 f4090000 008b45f4  E......E......E.
+ 1200 0faf45fc 8945f48b 45f499f7 7dfc8945  ..E..E..E...}..E
+ 1210 fcc745fc 05000000 c745f4fd ffffff8b  ..E......E......
+ 1220 45fcbe00 00000089 c7e827ff ffff8945  E.........'....E
+ 1230 fc8b45f4 be030000 0089c7e8 15ffffff  ..E.............
+ 1240 8945f4b8 00000000 c9c35548 89e54883  .E........UH..H.
+ 1250 ec10897d fc8975f8 837dfc01 7532817d  ...}..u..}..u2.}
+ 1260 f8ffff00 00752948 8d3dda2d 0000e8dd  .....u)H.=.-....
+ 1270 fdffff48 8d15be2d 0000488d 35c72d00  ...H...-..H.5.-.
+ 1280 00488b05 702d0000 4889c7e8 b0fdffff  .H..p-..H.......
+ 1290 90c9c355 4889e5be ffff0000 bf010000  ...UH...........
+ 12a0 00e8a4ff ffff5dc3 0f1f8400 00000000  ......].........
+ 12b0 41574989 d7415649 89f64155 4189fd41  AWI..AVI..AUA..A
+ 12c0 544c8d25 e02a0000 55488d2d e82a0000  TL.%.*..UH.-.*..
+ 12d0 534c29e5 4883ec08 e823fdff ff48c1fd  SL).H....#...H..
+ 12e0 03741b31 db0f1f00 4c89fa4c 89f64489  .t.1....L..L..D.
+ 12f0 ef41ff14 dc4883c3 014839dd 75ea4883  .A...H...H9.u.H.
+ 1300 c4085b5d 415c415d 415e415f c30f1f00  ..[]A\A]A^A_....
+ 1310 c3                                   .               
+Contents of section .fini:
+ 1314 4883ec08 4883c408 c3                 H...H....       
+Contents of section .rodata:
+ 2000 01000200 0025640a 00                 .....%d..       
+Contents of section .eh_frame_hdr:
+ 200c 011b033b 50000000 09000000 14f0ffff  ...;P...........
+ 201c 9c000000 54f0ffff c4000000 64f0ffff  ....T.......d...
+ 202c 6c000000 49f1ffff dc000000 7ef1ffff  l...I.......~...
+ 203c fc000000 3ef2ffff 1c010000 87f2ffff  ....>...........
+ 204c 3c010000 a4f2ffff 5c010000 04f3ffff  <.......\.......
+ 205c a4010000                             ....            
+Contents of section .eh_frame:
+ 2060 14000000 00000000 017a5200 01781001  .........zR..x..
+ 2070 1b0c0708 90010710 14000000 1c000000  ................
+ 2080 f0efffff 2b000000 00000000 00000000  ....+...........
+ 2090 14000000 00000000 017a5200 01781001  .........zR..x..
+ 20a0 1b0c0708 90010000 24000000 1c000000  ........$.......
+ 20b0 70efffff 40000000 000e1046 0e184a0f  p...@......F..J.
+ 20c0 0b770880 003f1a3b 2a332422 00000000  .w...?.;*3$"....
+ 20d0 14000000 44000000 88efffff 08000000  ....D...........
+ 20e0 00000000 00000000 1c000000 5c000000  ............\...
+ 20f0 65f0ffff 35000000 00410e10 8602430d  e...5....A....C.
+ 2100 06700c07 08000000 1c000000 7c000000  .p..........|...
+ 2110 7af0ffff c0000000 00410e10 8602430d  z........A....C.
+ 2120 0602bb0c 07080000 1c000000 9c000000  ................
+ 2130 1af1ffff 49000000 00410e10 8602430d  ....I....A....C.
+ 2140 0602440c 07080000 1c000000 bc000000  ..D.............
+ 2150 43f1ffff 15000000 00410e10 8602430d  C........A....C.
+ 2160 06500c07 08000000 44000000 dc000000  .P......D.......
+ 2170 40f1ffff 5d000000 00420e10 8f02450e  @...]....B....E.
+ 2180 188e0345 0e208d04 450e288c 05480e30  ...E. ..E.(..H.0
+ 2190 8606480e 38830747 0e406a0e 38410e30  ..H.8..G.@j.8A.0
+ 21a0 410e2842 0e20420e 18420e10 420e0800  A.(B. B..B..B...
+ 21b0 10000000 24010000 58f1ffff 01000000  ....$...X.......
+ 21c0 00000000 00000000                    ........        
+Contents of section .init_array:
+ 3da8 50110000 00000000 93120000 00000000  P...............
+Contents of section .fini_array:
+ 3db8 10110000 00000000                    ........        
+Contents of section .dynamic:
+ 3dc0 01000000 00000000 01000000 00000000  ................
+ 3dd0 01000000 00000000 85000000 00000000  ................
+ 3de0 01000000 00000000 8f000000 00000000  ................
+ 3df0 01000000 00000000 9d000000 00000000  ................
+ 3e00 0c000000 00000000 00100000 00000000  ................
+ 3e10 0d000000 00000000 14130000 00000000  ................
+ 3e20 19000000 00000000 a83d0000 00000000  .........=......
+ 3e30 1b000000 00000000 10000000 00000000  ................
+ 3e40 1a000000 00000000 b83d0000 00000000  .........=......
+ 3e50 1c000000 00000000 08000000 00000000  ................
+ 3e60 f5feff6f 00000000 08030000 00000000  ...o............
+ 3e70 05000000 00000000 20040000 00000000  ........ .......
+ 3e80 06000000 00000000 30030000 00000000  ........0.......
+ 3e90 0a000000 00000000 f4000000 00000000  ................
+ 3ea0 0b000000 00000000 18000000 00000000  ................
+ 3eb0 15000000 00000000 00000000 00000000  ................
+ 3ec0 03000000 00000000 00400000 00000000  .........@......
+ 3ed0 02000000 00000000 48000000 00000000  ........H.......
+ 3ee0 14000000 00000000 07000000 00000000  ................
+ 3ef0 17000000 00000000 58060000 00000000  ........X.......
+ 3f00 07000000 00000000 68050000 00000000  ........h.......
+ 3f10 08000000 00000000 f0000000 00000000  ................
+ 3f20 09000000 00000000 18000000 00000000  ................
+ 3f30 fbffff6f 00000000 00000008 00000000  ...o............
+ 3f40 feffff6f 00000000 28050000 00000000  ...o....(.......
+ 3f50 ffffff6f 00000000 02000000 00000000  ...o............
+ 3f60 f0ffff6f 00000000 14050000 00000000  ...o............
+ 3f70 f9ffff6f 00000000 04000000 00000000  ...o............
+ 3f80 00000000 00000000 00000000 00000000  ................
+ 3f90 00000000 00000000 00000000 00000000  ................
+ 3fa0 00000000 00000000 00000000 00000000  ................
+ 3fb0 00000000 00000000 00000000 00000000  ................
+ 3fc0 00000000 00000000 00000000 00000000  ................
+Contents of section .got:
+ 3fd0 00000000 00000000 00000000 00000000  ................
+ 3fe0 00000000 00000000 00000000 00000000  ................
+ 3ff0 00000000 00000000 00000000 00000000  ................
+Contents of section .got.plt:
+ 4000 c03d0000 00000000 00000000 00000000  .=..............
+ 4010 00000000 00000000 36100000 00000000  ........6.......
+ 4020 46100000 00000000 56100000 00000000  F.......V.......
+Contents of section .data:
+ 4030 00000000 00000000 38400000 00000000  ........8@......
+Contents of section .comment:
+ 0000 4743433a 20284465 6269616e 20382e33  GCC: (Debian 8.3
+ 0010 2e302d32 2920382e 332e3000           .0-2) 8.3.0.    
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	48 83 ec 08          	sub    rsp,0x8
+    1004:	48 8b 05 dd 2f 00 00 	mov    rax,QWORD PTR [rip+0x2fdd]        # 3fe8 <__gmon_start__>
+    100b:	48 85 c0             	test   rax,rax
+    100e:	74 02                	je     1012 <_init+0x12>
+    1010:	ff d0                	call   rax
+    1012:	48 83 c4 08          	add    rsp,0x8
+    1016:	c3                   	ret    
+
+Disassembly of section .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 e2 2f 00 00    	push   QWORD PTR [rip+0x2fe2]        # 4008 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	ff 25 e4 2f 00 00    	jmp    QWORD PTR [rip+0x2fe4]        # 4010 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+
+0000000000001030 <printf@plt>:
+    1030:	ff 25 e2 2f 00 00    	jmp    QWORD PTR [rip+0x2fe2]        # 4018 <printf@GLIBC_2.2.5>
+    1036:	68 00 00 00 00       	push   0x0
+    103b:	e9 e0 ff ff ff       	jmp    1020 <.plt>
+
+0000000000001040 <__cxa_atexit@plt>:
+    1040:	ff 25 da 2f 00 00    	jmp    QWORD PTR [rip+0x2fda]        # 4020 <__cxa_atexit@GLIBC_2.2.5>
+    1046:	68 01 00 00 00       	push   0x1
+    104b:	e9 d0 ff ff ff       	jmp    1020 <.plt>
+
+0000000000001050 <_ZNSt8ios_base4InitC1Ev@plt>:
+    1050:	ff 25 d2 2f 00 00    	jmp    QWORD PTR [rip+0x2fd2]        # 4028 <_ZNSt8ios_base4InitC1Ev@GLIBCXX_3.4>
+    1056:	68 02 00 00 00       	push   0x2
+    105b:	e9 c0 ff ff ff       	jmp    1020 <.plt>
+
+Disassembly of section .plt.got:
+
+0000000000001060 <__cxa_finalize@plt>:
+    1060:	ff 25 6a 2f 00 00    	jmp    QWORD PTR [rip+0x2f6a]        # 3fd0 <__cxa_finalize@GLIBC_2.2.5>
+    1066:	66 90                	xchg   ax,ax
+
+Disassembly of section .text:
+
+0000000000001070 <_start>:
+    1070:	31 ed                	xor    ebp,ebp
+    1072:	49 89 d1             	mov    r9,rdx
+    1075:	5e                   	pop    rsi
+    1076:	48 89 e2             	mov    rdx,rsp
+    1079:	48 83 e4 f0          	and    rsp,0xfffffffffffffff0
+    107d:	50                   	push   rax
+    107e:	54                   	push   rsp
+    107f:	4c 8d 05 8a 02 00 00 	lea    r8,[rip+0x28a]        # 1310 <__libc_csu_fini>
+    1086:	48 8d 0d 23 02 00 00 	lea    rcx,[rip+0x223]        # 12b0 <__libc_csu_init>
+    108d:	48 8d 3d f6 00 00 00 	lea    rdi,[rip+0xf6]        # 118a <main>
+    1094:	ff 15 46 2f 00 00    	call   QWORD PTR [rip+0x2f46]        # 3fe0 <__libc_start_main@GLIBC_2.2.5>
+    109a:	f4                   	hlt    
+    109b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+
+00000000000010a0 <deregister_tm_clones>:
+    10a0:	48 8d 3d 99 2f 00 00 	lea    rdi,[rip+0x2f99]        # 4040 <__TMC_END__>
+    10a7:	48 8d 05 92 2f 00 00 	lea    rax,[rip+0x2f92]        # 4040 <__TMC_END__>
+    10ae:	48 39 f8             	cmp    rax,rdi
+    10b1:	74 15                	je     10c8 <deregister_tm_clones+0x28>
+    10b3:	48 8b 05 1e 2f 00 00 	mov    rax,QWORD PTR [rip+0x2f1e]        # 3fd8 <_ITM_deregisterTMCloneTable>
+    10ba:	48 85 c0             	test   rax,rax
+    10bd:	74 09                	je     10c8 <deregister_tm_clones+0x28>
+    10bf:	ff e0                	jmp    rax
+    10c1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    10c8:	c3                   	ret    
+    10c9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+00000000000010d0 <register_tm_clones>:
+    10d0:	48 8d 3d 69 2f 00 00 	lea    rdi,[rip+0x2f69]        # 4040 <__TMC_END__>
+    10d7:	48 8d 35 62 2f 00 00 	lea    rsi,[rip+0x2f62]        # 4040 <__TMC_END__>
+    10de:	48 29 fe             	sub    rsi,rdi
+    10e1:	48 c1 fe 03          	sar    rsi,0x3
+    10e5:	48 89 f0             	mov    rax,rsi
+    10e8:	48 c1 e8 3f          	shr    rax,0x3f
+    10ec:	48 01 c6             	add    rsi,rax
+    10ef:	48 d1 fe             	sar    rsi,1
+    10f2:	74 14                	je     1108 <register_tm_clones+0x38>
+    10f4:	48 8b 05 f5 2e 00 00 	mov    rax,QWORD PTR [rip+0x2ef5]        # 3ff0 <_ITM_registerTMCloneTable>
+    10fb:	48 85 c0             	test   rax,rax
+    10fe:	74 08                	je     1108 <register_tm_clones+0x38>
+    1100:	ff e0                	jmp    rax
+    1102:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+    1108:	c3                   	ret    
+    1109:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+0000000000001110 <__do_global_dtors_aux>:
+    1110:	80 3d 29 2f 00 00 00 	cmp    BYTE PTR [rip+0x2f29],0x0        # 4040 <__TMC_END__>
+    1117:	75 2f                	jne    1148 <__do_global_dtors_aux+0x38>
+    1119:	55                   	push   rbp
+    111a:	48 83 3d ae 2e 00 00 	cmp    QWORD PTR [rip+0x2eae],0x0        # 3fd0 <__cxa_finalize@GLIBC_2.2.5>
+    1121:	00 
+    1122:	48 89 e5             	mov    rbp,rsp
+    1125:	74 0c                	je     1133 <__do_global_dtors_aux+0x23>
+    1127:	48 8b 3d 0a 2f 00 00 	mov    rdi,QWORD PTR [rip+0x2f0a]        # 4038 <__dso_handle>
+    112e:	e8 2d ff ff ff       	call   1060 <__cxa_finalize@plt>
+    1133:	e8 68 ff ff ff       	call   10a0 <deregister_tm_clones>
+    1138:	c6 05 01 2f 00 00 01 	mov    BYTE PTR [rip+0x2f01],0x1        # 4040 <__TMC_END__>
+    113f:	5d                   	pop    rbp
+    1140:	c3                   	ret    
+    1141:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+    1148:	c3                   	ret    
+    1149:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+0000000000001150 <frame_dummy>:
+    1150:	e9 7b ff ff ff       	jmp    10d0 <register_tm_clones>
+
+0000000000001155 <_Z4funcii>:
+    1155:	55                   	push   rbp
+    1156:	48 89 e5             	mov    rbp,rsp
+    1159:	89 7d ec             	mov    DWORD PTR [rbp-0x14],edi
+    115c:	89 75 e8             	mov    DWORD PTR [rbp-0x18],esi
+    115f:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+    1166:	c7 45 f8 01 00 00 00 	mov    DWORD PTR [rbp-0x8],0x1
+    116d:	c7 45 f4 02 00 00 00 	mov    DWORD PTR [rbp-0xc],0x2
+    1174:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+    1177:	3b 45 e8             	cmp    eax,DWORD PTR [rbp-0x18]
+    117a:	7e 07                	jle    1183 <_Z4funcii+0x2e>
+    117c:	b8 01 00 00 00       	mov    eax,0x1
+    1181:	eb 05                	jmp    1188 <_Z4funcii+0x33>
+    1183:	b8 00 00 00 00       	mov    eax,0x0
+    1188:	5d                   	pop    rbp
+    1189:	c3                   	ret    
+
+000000000000118a <main>:
+    118a:	55                   	push   rbp
+    118b:	48 89 e5             	mov    rbp,rsp
+    118e:	48 83 ec 10          	sub    rsp,0x10
+    1192:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+    1199:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
+    119d:	c7 45 f4 01 00 00 00 	mov    DWORD PTR [rbp-0xc],0x1
+    11a4:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    11a7:	01 45 f4             	add    DWORD PTR [rbp-0xc],eax
+    11aa:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    11ad:	89 c6                	mov    esi,eax
+    11af:	48 8d 3d 4f 0e 00 00 	lea    rdi,[rip+0xe4f]        # 2005 <_ZStL19piecewise_construct+0x1>
+    11b6:	b8 00 00 00 00       	mov    eax,0x0
+    11bb:	e8 70 fe ff ff       	call   1030 <printf@plt>
+    11c0:	c7 45 f8 00 00 00 00 	mov    DWORD PTR [rbp-0x8],0x0
+    11c7:	83 7d f8 04          	cmp    DWORD PTR [rbp-0x8],0x4
+    11cb:	7f 0c                	jg     11d9 <main+0x4f>
+    11cd:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+    11d0:	01 45 fc             	add    DWORD PTR [rbp-0x4],eax
+    11d3:	83 45 f8 01          	add    DWORD PTR [rbp-0x8],0x1
+    11d7:	eb ee                	jmp    11c7 <main+0x3d>
+    11d9:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    11dc:	89 c6                	mov    esi,eax
+    11de:	48 8d 3d 20 0e 00 00 	lea    rdi,[rip+0xe20]        # 2005 <_ZStL19piecewise_construct+0x1>
+    11e5:	b8 00 00 00 00       	mov    eax,0x0
+    11ea:	e8 41 fe ff ff       	call   1030 <printf@plt>
+    11ef:	c7 45 fc 03 00 00 00 	mov    DWORD PTR [rbp-0x4],0x3
+    11f6:	c7 45 f4 09 00 00 00 	mov    DWORD PTR [rbp-0xc],0x9
+    11fd:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    1200:	0f af 45 fc          	imul   eax,DWORD PTR [rbp-0x4]
+    1204:	89 45 f4             	mov    DWORD PTR [rbp-0xc],eax
+    1207:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    120a:	99                   	cdq    
+    120b:	f7 7d fc             	idiv   DWORD PTR [rbp-0x4]
+    120e:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+    1211:	c7 45 fc 05 00 00 00 	mov    DWORD PTR [rbp-0x4],0x5
+    1218:	c7 45 f4 fd ff ff ff 	mov    DWORD PTR [rbp-0xc],0xfffffffd
+    121f:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+    1222:	be 00 00 00 00       	mov    esi,0x0
+    1227:	89 c7                	mov    edi,eax
+    1229:	e8 27 ff ff ff       	call   1155 <_Z4funcii>
+    122e:	89 45 fc             	mov    DWORD PTR [rbp-0x4],eax
+    1231:	8b 45 f4             	mov    eax,DWORD PTR [rbp-0xc]
+    1234:	be 03 00 00 00       	mov    esi,0x3
+    1239:	89 c7                	mov    edi,eax
+    123b:	e8 15 ff ff ff       	call   1155 <_Z4funcii>
+    1240:	89 45 f4             	mov    DWORD PTR [rbp-0xc],eax
+    1243:	b8 00 00 00 00       	mov    eax,0x0
+    1248:	c9                   	leave  
+    1249:	c3                   	ret    
+
+000000000000124a <_Z41__static_initialization_and_destruction_0ii>:
+    124a:	55                   	push   rbp
+    124b:	48 89 e5             	mov    rbp,rsp
+    124e:	48 83 ec 10          	sub    rsp,0x10
+    1252:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+    1255:	89 75 f8             	mov    DWORD PTR [rbp-0x8],esi
+    1258:	83 7d fc 01          	cmp    DWORD PTR [rbp-0x4],0x1
+    125c:	75 32                	jne    1290 <_Z41__static_initialization_and_destruction_0ii+0x46>
+    125e:	81 7d f8 ff ff 00 00 	cmp    DWORD PTR [rbp-0x8],0xffff
+    1265:	75 29                	jne    1290 <_Z41__static_initialization_and_destruction_0ii+0x46>
+    1267:	48 8d 3d da 2d 00 00 	lea    rdi,[rip+0x2dda]        # 4048 <_ZStL8__ioinit>
+    126e:	e8 dd fd ff ff       	call   1050 <_ZNSt8ios_base4InitC1Ev@plt>
+    1273:	48 8d 15 be 2d 00 00 	lea    rdx,[rip+0x2dbe]        # 4038 <__dso_handle>
+    127a:	48 8d 35 c7 2d 00 00 	lea    rsi,[rip+0x2dc7]        # 4048 <_ZStL8__ioinit>
+    1281:	48 8b 05 70 2d 00 00 	mov    rax,QWORD PTR [rip+0x2d70]        # 3ff8 <_ZNSt8ios_base4InitD1Ev@GLIBCXX_3.4>
+    1288:	48 89 c7             	mov    rdi,rax
+    128b:	e8 b0 fd ff ff       	call   1040 <__cxa_atexit@plt>
+    1290:	90                   	nop
+    1291:	c9                   	leave  
+    1292:	c3                   	ret    
+
+0000000000001293 <_GLOBAL__sub_I_glob>:
+    1293:	55                   	push   rbp
+    1294:	48 89 e5             	mov    rbp,rsp
+    1297:	be ff ff 00 00       	mov    esi,0xffff
+    129c:	bf 01 00 00 00       	mov    edi,0x1
+    12a1:	e8 a4 ff ff ff       	call   124a <_Z41__static_initialization_and_destruction_0ii>
+    12a6:	5d                   	pop    rbp
+    12a7:	c3                   	ret    
+    12a8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+    12af:	00 
+
+00000000000012b0 <__libc_csu_init>:
+    12b0:	41 57                	push   r15
+    12b2:	49 89 d7             	mov    r15,rdx
+    12b5:	41 56                	push   r14
+    12b7:	49 89 f6             	mov    r14,rsi
+    12ba:	41 55                	push   r13
+    12bc:	41 89 fd             	mov    r13d,edi
+    12bf:	41 54                	push   r12
+    12c1:	4c 8d 25 e0 2a 00 00 	lea    r12,[rip+0x2ae0]        # 3da8 <__frame_dummy_init_array_entry>
+    12c8:	55                   	push   rbp
+    12c9:	48 8d 2d e8 2a 00 00 	lea    rbp,[rip+0x2ae8]        # 3db8 <__init_array_end>
+    12d0:	53                   	push   rbx
+    12d1:	4c 29 e5             	sub    rbp,r12
+    12d4:	48 83 ec 08          	sub    rsp,0x8
+    12d8:	e8 23 fd ff ff       	call   1000 <_init>
+    12dd:	48 c1 fd 03          	sar    rbp,0x3
+    12e1:	74 1b                	je     12fe <__libc_csu_init+0x4e>
+    12e3:	31 db                	xor    ebx,ebx
+    12e5:	0f 1f 00             	nop    DWORD PTR [rax]
+    12e8:	4c 89 fa             	mov    rdx,r15
+    12eb:	4c 89 f6             	mov    rsi,r14
+    12ee:	44 89 ef             	mov    edi,r13d
+    12f1:	41 ff 14 dc          	call   QWORD PTR [r12+rbx*8]
+    12f5:	48 83 c3 01          	add    rbx,0x1
+    12f9:	48 39 dd             	cmp    rbp,rbx
+    12fc:	75 ea                	jne    12e8 <__libc_csu_init+0x38>
+    12fe:	48 83 c4 08          	add    rsp,0x8
+    1302:	5b                   	pop    rbx
+    1303:	5d                   	pop    rbp
+    1304:	41 5c                	pop    r12
+    1306:	41 5d                	pop    r13
+    1308:	41 5e                	pop    r14
+    130a:	41 5f                	pop    r15
+    130c:	c3                   	ret    
+    130d:	0f 1f 00             	nop    DWORD PTR [rax]
+
+0000000000001310 <__libc_csu_fini>:
+    1310:	c3                   	ret    
+
+Disassembly of section .fini:
+
+0000000000001314 <_fini>:
+    1314:	48 83 ec 08          	sub    rsp,0x8
+    1318:	48 83 c4 08          	add    rsp,0x8
+    131c:	c3                   	ret    

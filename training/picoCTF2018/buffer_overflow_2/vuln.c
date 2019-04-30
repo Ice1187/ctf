@@ -3,12 +3,11 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include "asm.h"
 
-#define BUFSIZE 32
+#define BUFSIZE 100
 #define FLAGSIZE 64
 
-void win() {
+void win(unsigned int arg1, unsigned int arg2) {
   char buf[FLAGSIZE];
   FILE *f = fopen("flag.txt","r");
   if (f == NULL) {
@@ -17,14 +16,18 @@ void win() {
   }
 
   fgets(buf,FLAGSIZE,f);
+  printf("Yeap! First step.");
+  if (arg1 != 0xDEADBEEF)
+    return;
+  if (arg2 != 0xDEADC0DE)
+    return;
   printf(buf);
 }
 
 void vuln(){
   char buf[BUFSIZE];
   gets(buf);
-
-  printf("Okay, time to return... Fingers Crossed... Jumping to 0x%x\n", get_return_address());
+  puts(buf);
 }
 
 int main(int argc, char **argv){

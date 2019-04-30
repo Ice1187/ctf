@@ -1,0 +1,42 @@
+<do_magic>:
+
+ebp-0x14: input         # a*20
+ebp-0x10: len of input  # 21
+ebp-0xc : a variable created by malloc
+
+
+<do_magic+93>:
+
+# The C library ref
+#
+# 2.14.6 memset
+# Declaration:
+#
+# void *memset(void *str, int c, size_t n);
+#
+# Copies the character c (an unsigned char) to the first n characters of the string pointed to by the argument str.
+#
+# The argument str is returned.
+
+ebp-0xc is a 16-byte varibel, all bytes are 0.
+
+<do_magic+107>:
+ebp-0x1c = 0
+ebp-0x18 = 0
+
+---
+
+> All the things seems to start since jumping to <+123> 
+> It seems that the magic is xor input with \x4f\x16\x06\x29 (little endian). Then store the result into ebp-0x1d
+
+<+150>:
+ds:0x804a038 = "You have now entered the Duck Web, and you're in for a honkin' good time.\nCan you figure out my trick?"
+
+the result of xor will cmp with ds:0x804a038
+
+ebp-0x18: the iterator of the loop # for i %(0, len(input))
+ebp-0x1c: might be counting how many xored_char is equaled to ds:0x804a038, it has to be greater then 0x19 to trigger something different.
+
+xor key: \x29\x06\x16\x4f\x2b\x35\x30\x1e\x51\x1b\x5b\x14\x4b\x08\x5d\x2b\x56\x47\x57\x50\x16\x4d\x51\x51\x5d\x00\x4e\x6
+
+> In for loop(ebp-0x18), When a char of the result of 'input xor key' equals to ds:0x804a038, ebp-0x1c increase 1. As long as ebp-0x1c is greater then 0x19, something happen(?)
