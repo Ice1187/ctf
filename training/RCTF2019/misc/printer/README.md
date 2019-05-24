@@ -21,7 +21,7 @@
 
 After googling, it came out that the printer might be Barcode Printer, and the info was TSPL/TSPL2 commands, a programming language using by printers. [TSPL/TSLP2 programming manual (en)](https://www.mediaform.de/fileadmin/support/handbuecher/Armilla/Handbuecher/TSC_TSPL_TSPL2_Programming.pdf) / [(cn)](https://github.com/lokingwei/tspl-printer-php/blob/master/document/%E6%9D%A1%E7%A0%81%E6%9C%BA%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B%E6%89%8B%E5%86%8C.pdf)
 
-1. In `Leftover Capture Data` of packet[673, 674], it showed the info about printing. It is able to extract the data in `wireshark by simply `select the packet -> right click the layer(ex: Leftover Capture Data) -> copy -> Value`
+1. In `Leftover Capture Data` of packet[673, 674], it showed the info about printing. It is able to extract the data in `wireshark` by simply `select the packet -> right click the layer(ex: Leftover Capture Data) -> copy -> Value`
 ```
 SIZE 47.5 mm, 80.1 mm
 GAP 3 mm, 0 mm
@@ -91,9 +91,11 @@ BAR 152, 351, 2, 16
 PRINT 1,1
 ```
 
-2. `BITMAP` can be used to draw bitmap images, and `BAR` to bar. The definitions of these commands are in the manual mentioned above. So, I use `wireshark` to extract the data and write `draw.py` to draw the graph. Thank tangerine1202 for helping me write this script. Without him, I definitely can't make it.
+2. `BITMAP` can be used to draw bitmap images, and `BAR` is bar code. The definitions of these commands are in the manual mentioned above. So, I use `wireshark` to extract the data and write `draw.py` to draw the graph. Thank tangerine1202 for helping me write this script.
 
 3. The graph is the flag. Get flag.
+
+![flag.png](https://github.com/Ice1187/ctf/blob/master/training/RCTF2019/misc/printer/flag.png)
 
 ## Files
 
