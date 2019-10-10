@@ -3,8 +3,7 @@
 #include<string.h>
 void print_monkey(void)
 {
-    //system("cat /home/ctf/graph");
-    system("cat ./graph");
+    system("cat /home/ctf/graph");
     fflush(stdout);
 }
 void menu(void)
