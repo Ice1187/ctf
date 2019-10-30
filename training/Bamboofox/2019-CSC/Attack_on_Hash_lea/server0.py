@@ -15,14 +15,15 @@ def main():
 
         token = input("input your token: ").strip()
         auth = input("input your authentication code: ").strip()
-
+        
         if auth == hashlib.sha256(salt + b64decode(token.encode('ascii'))).hexdigest():
             if b"user=admin" in b64decode(token):
-                print(flag.decode('utf-8'))
+                print(flag)
             else:
                 print("YOU ARE NOT ADMIN, GO AWAY!")
         else:
             print("YOU ARE NOT ALLOW TO CHANGE MY TOKEN!")
+            
     except:
         exit(0)
 
